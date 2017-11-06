@@ -8,5 +8,5 @@ module load mvapich2/gcc/64/2.2rc1
 
 cd$HOME
 
-mpirun -np 3 ./my_mm3 > $HOME/output3p.txt
+mpirun -np 3 ./my_mm3 > $HOME/outputverify.txt
 
