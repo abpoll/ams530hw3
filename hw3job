@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -l nodes=2:ppn=28,walltime=00:30:00
+#PBS -N hw3job
+#PBS -q debug
+
+module load shared
+module load mvapich2/gcc/64/2.2rc1
+
+cd$HOME
+
+mpirun -np 2 ./my_mm > $HOME/output2p.txt
+mpirun -np 4 ./my_mm > $HOME/output2p.txt
+mpirun -np 14 ./my_mm > $HOME/output14p.txt
+mpirun -np 28 ./my_mm > $HOME/output28p.txt
+mpirun -np 56 ./my_mm > $HOME/output56p.txt
