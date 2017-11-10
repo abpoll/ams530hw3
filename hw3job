@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l nodes=2:ppn=28,walltime=00:30:00
+#PBS -l nodes=8:ppn=28,walltime=00:30:00
 #PBS -N hw3job
 #PBS -q debug
 
@@ -11,3 +11,4 @@ cd$HOME
 mpirun -np 14 ./my_mm > $HOME/output14p.txt
 mpirun -np 28 ./my_mm > $HOME/output28p.txt
 mpirun -np 56 ./my_mm > $HOME/output56p.txt
+mpirun -np 224 ./my_mm > $HOME/output224p.txt
